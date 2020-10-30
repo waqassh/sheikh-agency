@@ -32,13 +32,15 @@ module.exports = {
 
       resolve: "gatsby-source-graphql",
       
+      
+
       options: {
       
       typeName: "WPGraphql",
       
       fieldName: "wpcontent",
       
-      url: "http://sheikh-invest.local/",
+      url: "http://sheikh-invest.local/graphql",
       
       },
       
