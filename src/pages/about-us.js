@@ -12,10 +12,11 @@ const AboutUsPage = () => {
         wpcontent: {
         page: {
             aboutUsMeta:{
-                aboutUsPageDescription,aboutUsPageHeaderPicture},
-        },
-    },
-} = useStaticQuery(graphql`
+                aboutUsPageDescription,
+                aboutUsPageHeaderPicture
+            }
+        }
+    }} = useStaticQuery(graphql`
     query{
         wpcontent{
           page(id: "about-us", idType: URI) {
@@ -42,6 +43,7 @@ const AboutUsPage = () => {
 
     return(
         <Layout>
+        <SEO title="About Us"/>
         <Wrapper descriptionColor = {COLORS.PRIMARY}>
             <div className= "banner">
                 <Image
@@ -51,7 +53,7 @@ const AboutUsPage = () => {
             </div>
             <div className= "description">
             <h2>About Us</h2>
-            <p>{aboutUsPageHeaderPicture}</p>
+            <p>{aboutUsPageDescription}</p>
             <BottomEdgeDown color={COLORS.BLACK}/>
             </div>
         </Wrapper>
